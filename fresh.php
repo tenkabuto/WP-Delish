@@ -12,7 +12,7 @@
   
   $exit_msg = 'WP Delish requires WordPress 2.8 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
   
-  if (version_compare($wp_version, "2.8", "<")) {
+  if (version_compare($wp_version, "3.3", "<")) {
       exit($exit_msg);
   }
   
@@ -43,20 +43,21 @@
   
   function WPDelish_Init() {
   
-  	// register widget
-  	wp_register_sidebar_widget(
-  	    'WPDelish_Widget',        // your unique widget id
-  	    'WP Delish',          // widget name
-  	    'WPDelish_Widget',  // callback function
-  	    array(                  // options
-  	        'description' => 'Display relevant Delicious bookmarks!'
-  	    )
-  	);
+//      @todo Make sure that the plugin works without this section
+//  	// register widget
+//  	wp_register_sidebar_widget(
+//  	    'WPDelish_Widget',        // your unique widget id
+//  	    'WP Delish',          // widget name
+//  	    'WPDelish_Widget',  // callback function
+//  	    array(                  // options
+//  	        'description' => 'Display relevant Delicious bookmarks!'
+//  	    )
+//  	);
+//  	
+//  	// register widget control
+//  	register_widget_control('WP Delish', array(__FILE__, 'WPDelish_WidgetControl'));
   	
-  	// register widget control
-  	register_widget_control('WP Delish', array(__FILE__, 'WPDelish_WidgetControl'));
-  	
-  	register_deactivation_hook( __FILE__, 'plugin_cleanup');
+  	register_uninstall_hook( __FILE__, 'plugin_cleanup');
   
   }
   
