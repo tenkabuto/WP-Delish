@@ -1,12 +1,12 @@
 <?php
 /*
-Plugin Name: TODO
-Plugin URI: TODO
-Description: TODO
-Version: 1.0
-Author: TODO
-Author URI: TODO
-Author Email: TODO
+Plugin Name: WP Delish
+Plugin URI: https://github.com/tenkabuto/WP-Delish
+Description: WordPress Tags + Delicious Tags = High-Quality, Relevant Links
+Version: 0.1
+Author: Brandon Hall
+Author URI: https://github.com/tenkabuto
+Author Email: tenkabuto@gmail.com
 License:
 
   Copyright 2012 TODO (email@domain.com)
