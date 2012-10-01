@@ -10,7 +10,7 @@
   
   global $wp_version;
   
-  $exit_msg = 'WP Delish requires WordPress 2.8 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
+  $exit_msg = 'WP Delish requires WordPress 3.3 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
   
   if (version_compare($wp_version, "3.3", "<")) {
       exit($exit_msg);
